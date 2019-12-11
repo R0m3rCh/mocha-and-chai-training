@@ -1,3 +1,12 @@
+let response = []
+
+function fizzBuzzSequence(numbersArray) {
+  numbersArray.forEach(el =>
+    response.push(fizzBuzz(el))
+    )
+  return response
+}
+
 function fizzBuzz(number) {
   if((number % 3) == 0 && (number % 5) == 0){
     return "FizzBuzz"
@@ -12,5 +21,6 @@ function fizzBuzz(number) {
 }
 
 module.exports = {
-  fizzBuzz: fizzBuzz
+  fizzBuzz: fizzBuzz,
+  fizzBuzzSequence: fizzBuzzSequence
 }
