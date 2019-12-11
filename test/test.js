@@ -4,6 +4,7 @@ var should = require('chai').should()
 
 const FIZZBUZZ = require('../index.js')
 let numbersArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+let expectedArray = [1, 2, 'Fizz', 4, 'Buzz', 'Fizz', 7, 8, 'Fizz', 'Buzz', 11, 'Fizz', 13, 14, 'FizzBuzz']
 
 describe('FizzBuzz', function() {
   describe('Mocha Assertions', function() {
@@ -49,6 +50,10 @@ describe('FizzBuzz', function() {
   })
 
   describe('fizzBuzzSequense()', function() {
+    beforeEach(function() {
+      FIZZBUZZ.responseReset()
+    })
+    
     it('should return an array when the value is an array of numbers',
     function() {
       chaiExpect(FIZZBUZZ.fizzBuzzSequence(numbersArray)).to.be.an('array')
@@ -58,6 +63,11 @@ describe('FizzBuzz', function() {
     function() {
       chaiExpect(FIZZBUZZ.fizzBuzzSequence(numbersArray)).to.be.an('array')
         .that.includes('Fizz', 'buzz', "FizzBuzz")
+    })
+
+    it('should return an array element when the value is an array of numbers',
+    function() {
+      assert.deepEqual(FIZZBUZZ.fizzBuzzSequence(numbersArray), expectedArray)
     })
   })
 })

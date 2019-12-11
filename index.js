@@ -20,7 +20,12 @@ function fizzBuzz(number) {
   return number
 }
 
+function responseReset() {
+  response = [];
+}
+
 module.exports = {
   fizzBuzz: fizzBuzz,
-  fizzBuzzSequence: fizzBuzzSequence
+  fizzBuzzSequence: fizzBuzzSequence,
+  responseReset: responseReset
 }
