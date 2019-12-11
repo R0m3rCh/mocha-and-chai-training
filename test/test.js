@@ -1,5 +1,6 @@
 var assert = require('assert')
-var chaiAssert = require('chai').expect
+var chaiExpect = require('chai').expect
+var should = require('chai').should()
 const FIZZBUZZ = require('../index.js')
 
 describe('FizzBuzz', function() {
@@ -17,13 +18,23 @@ describe('FizzBuzz', function() {
     })
   })
 
-  describe('Chai Assertions', function() {
+  describe('Chai Expect', function() {
     it('should return a string when the value is 3', function() {
-        chaiAssert(FIZZBUZZ.fizzBuzz(3)).to.be.a('String')
+        chaiExpect(FIZZBUZZ.fizzBuzz(3)).to.be.a('String')
     })
 
     it('should return an integer when the value is 4', function() {
-        chaiAssert(FIZZBUZZ.fizzBuzz(4)).to.be.a('number')
+        chaiExpect(FIZZBUZZ.fizzBuzz(4)).to.be.a('number')
+    })
+  })
+
+  describe('Chai Should', function() {
+    it('should return a string when the value is 15', function() {
+        FIZZBUZZ.fizzBuzz(15).should.be.a('String')
+    })
+
+    it('should return an integer when the value is 8', function() {
+        FIZZBUZZ.fizzBuzz(8).should.be.a('number')
     })
   })
 })

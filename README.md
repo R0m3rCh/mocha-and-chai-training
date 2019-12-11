@@ -1,12 +1,12 @@
 ### mocha-and-chai-training
 
-Install all dependencies
+Install all dependencies:
 
 ```sh
 $ npm install
 ```
 
-Run all tests
+Run all tests:
 
 ```sh
 $ npm test
