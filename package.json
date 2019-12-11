@@ -1,0 +1,23 @@
+{
+  "name": "mocha-and-chai-training",
+  "version": "1.0.0",
+  "description": "JavaScript Automation training",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/R0m3rCh/mocha-and-chai-training.git"
+  },
+  "author": "Romer Chavez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/R0m3rCh/mocha-and-chai-training/issues"
+  },
+  "homepage": "https://github.com/R0m3rCh/mocha-and-chai-training#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.2.2"
+  }
+}
