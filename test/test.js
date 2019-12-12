@@ -50,9 +50,6 @@ describe('FizzBuzz', function() {
   })
 
   describe('fizzBuzzSequense()', function() {
-    beforeEach(function() {
-      FIZZBUZZ.responseReset()
-    })
     
     it('should return an array when the value is an array of numbers',
     function() {
@@ -68,6 +65,11 @@ describe('FizzBuzz', function() {
     it('should return an array element when the value is an array of numbers',
     function() {
       assert.deepEqual(FIZZBUZZ.fizzBuzzSequence(numbersArray), expectedArray)
+    })
+
+    it('should return 4 when the value is an array of numbers',
+    function() {
+      assert.deepEqual(FIZZBUZZ.fizzBuzzSequence([4]), [4])
     })
   })
 })
